@@ -1,7 +1,7 @@
 class Login{
 
  enterEmail(Email) {
-      cy.get('input[placeholder="Type email address"]', { timeout: 10000 })
+      cy.get('input[placeholder="Type Your Work Email Here"]', { timeout: 10000 })
         .should('be.visible')
         .type(Email)
         .then($input => {
@@ -13,7 +13,7 @@ class Login{
     }
 
  enterPassword(Password) {
-        cy.get('input[placeholder="Type Password"]', { timeout: 10000 })
+        cy.get('input[placeholder="Enter your password"]', { timeout: 10000 })
         .should('be.visible')
         .type(Password)
         .then($input => {
