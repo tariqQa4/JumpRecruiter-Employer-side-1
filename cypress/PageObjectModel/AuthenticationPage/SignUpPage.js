@@ -21,7 +21,7 @@ clickAsEmployer(){
 
     const randomEmail = `user_${Date.now()}@example.com`;
 
-    cy.get('input[placeholder="Type email address"]', { timeout: 10000 })
+    cy.get('input[placeholder="Type your work email address here"]', { timeout: 10000 })
       .should("be.visible")
       .type(randomEmail)
       .then(($input) => {
