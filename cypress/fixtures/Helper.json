@@ -1,0 +1,60 @@
+
+[
+  {
+    "FirstName": "Tariq",
+    "LastName": "Majeed",
+    "Email": "Testing@Testing.com",
+    "createpassword": "tariq1234",
+    "confirmpassword": "tariq1234",
+    "resumeName" : "Tariq Majeed Sr.SQAE",
+    "cardNumber" : "4000056655665556",
+    "CvV" : "324",
+    "NameOnCard" : "Tariq Majeed",
+    "ExpirationDate" : "12/2025", 
+    "Designation" : "Sr.SQAE", 
+    "PhoneNumber" : "6177123456",
+    "StreetAddress" : "47W 13th ",
+    "CityStatePostalCode" : "New York, NY 10011",
+    "Summary" : "I am an accomplished Marketing Manager with a proven track record of developing and implementing successful marketing strategies for diverse industries. With a deep understanding of consumer behavior and market dynamics, I excel in crafting innovative campaigns that resonate with target audiences and drive measurable results. ",
+    "DoB" : "14-11-1996",
+    "FieldOfStudy" : "Bachelor of Software Engineering",
+    "Institue" : "Minhaj University Lahore",
+    "Country" : "Pakistan",
+    "CityState" : " Lahore Punjab",
+    "startDate" : " 30-10-2011",
+    "EndDate" : " 30-10-2016",
+    "JobTitle" : "Sr.SQAE",
+    "CompanyName" : " NetSole",
+    "Skill" : "[Manual Testing,Automation Testing,Api Testing,]",
+    "Certificate": "QA FundaMental",
+    "Organization" : "10 Pearl University",
+    "Description" : "Gained comprehensive understanding of software quality assurance principles, methodologies, and best practices.",
+    "LinkTitle" : "LinkedIn",
+    " Link" : "https://www.linkedin.com/",
+    "PublicationTitle" : " QA FundaMental",
+    "Publication" : " Testing",
+    "IssueDate" : "15-08-2024",
+    "Author" : "Tariq Majeed",
+    "UrL" : "https://www.google.com",
+    "ProjectName" : "Acrosoft",
+    "PatentTitle" : "QA methodologies",
+    "PatentNumber" : "US12345678B1",
+    "PatentInventor" : " QA Engineering",
+    "FullName" : "Tariq Majeed",
+    "ReportDesc" : "Illegal not verified company scammers",
+    "ZipCode" : "45000",
+    "RewardsTitle" : " Testing Rewards",
+    "NumberOFHire" : " 4"
+    
+  },
+
+
+
+  {
+
+
+
+
+  }
+  
+]
