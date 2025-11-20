@@ -5,17 +5,17 @@ class Signup{
     
 clickAsEmployer(){
     cy.contains("button", "Log In").click();
-    cy.get('input[placeholder="Type email address"]', { timeout: 10000 })
-      .should("be.visible")
-      .type("qa.tester@mailinator.com")
-      .then(($input) => {
-        $input.css("border", "3px solid red");
-      });
+    // cy.get('input[placeholder="Type email address"]', { timeout: 10000 })
+    //   .should("be.visible")
+    //   .type("qa.tester@mailinator.com")
+    //   .then(($input) => {
+    //     $input.css("border", "3px solid red");
+    //   });
 
-    cy.wait(1000);
-    cy.contains("button", "Continue", { timeout: 10000 }).click({
-      multiple: true,
-    });
+    // cy.wait(1000);
+    // cy.contains("button", "Continue", { timeout: 10000 }).click({
+    //   multiple: true,
+    // });
 
     cy.get('a[href="/signup"]').should("be.visible").click();
 
