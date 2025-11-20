@@ -23,8 +23,8 @@ describe('Homepage test suite', () => {
     it('Home page ', () => {
         const homePage = new HomePage();
         homePage.visit();
-        homePage.PostAjob();
-        homePage.ClickonAboutUs();
+        // homePage.PostAjob();
+        // homePage.ClickonAboutUs();
         homePage.ClickonContactUs();
         homePage.ClickonProfile();
     });

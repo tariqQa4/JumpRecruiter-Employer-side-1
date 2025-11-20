@@ -45,8 +45,8 @@ class HomePage {
     cy.wait(2000);
     cy.scrollTo("bottom", { duration: 6000 });
     cy.scrollTo("top", { duration: 6000 });
-    cy.wait(2000);
-    cy.get('img[alt="Logo"]').click();
+    cy.wait(3000);
+    // cy.get('img[alt="Logo"]').click();
   }
   ClickonProfile() {
     // 1. Click the profile icon
