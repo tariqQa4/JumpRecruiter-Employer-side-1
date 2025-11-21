@@ -9,6 +9,7 @@ describe("Post A job  test suite", () => {
     "C:Users\tariqOneDriveDesktopJump Recruiter Employeer Sidecypress\fixturesTestResume.pdf";
   const pictureFile =
     "C:Users\tariqOneDriveDesktopJump Recruiter Employeer Sidecypress\fixtures\test-logo-570-5785.png";
+
   beforeEach(() => {
     cy.viewport(2560, 1392);
     cy.visit("https://qa-employer.jumprecruiter.com/");
@@ -24,16 +25,13 @@ describe("Post A job  test suite", () => {
   // Post A job  by new
 
   it(" post a job by new  ", () => {
-    postAjob.clickPostAJobButton();
+    cy.fixture("Helper").then((data) => {
 
     // postAjob.postAjobWithNewJob();
 
     // Baic Information stepper
-    cy.fixture("Helper").then((data) => {
-      postAjob.enterJobitle(data.JobTitle);
-      postAjob.selectIndustryType();
-      postAjob.enterNumberofHire(data.NumberOFHire);
-      postAjob.selectLocationType();
+   
+       postAjob.clickPostAJobButton();
 
       // Add Your Basic Information section
       postAjob.enterJobitle(data.JobTitle);

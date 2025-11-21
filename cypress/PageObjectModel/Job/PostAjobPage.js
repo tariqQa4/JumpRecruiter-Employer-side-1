@@ -1,43 +1,37 @@
 class PostAjob {
   clickPostAJobButton() {
-    cy.contains('span', 'Post a Job').click()
-      .should("be.visible")
-      .click()
-      .should("be.visible")
-      .then(($input) => {
-        $input.css("border", "4px solid red");
-      });
-    // cy.get('a[href="/job-post"]').click({ force: true });
-
+    cy.contains('button', 'Decline').click();
     cy.wait(2000);
-    cy.contains("button", "Post a Job").click();
+   cy.get('a[href="/job-post"] img[alt="Post a Job icon"]').should("be.visible").click();
 
-    cy.wait(2000);
-    cy.contains("button", "Continue").click();
+  cy.wait(5000);
+  cy.get('button.bg-primary').contains('Post a Job').click()
+
+  // cy.contains('button', 'Save & Continue').click()
+
+
+
+
+
+
+
+  
   }
 
-  // postAjob(){
-  //    cy.contains('a', 'Post a Job').click();
-
-  // }
-
-  // postAjobWithNewJob(){
-  //     cy.get('').click()
-  //     cy.get('').click()
-  // }
+ 
 
   // Add Your Basic Information section
 
   enterJobitle() {
-    cy.get('input[name="basic_info.job_title_id"]').type("Software Engineer");
+    cy.get('input[placeholder="Type or select job title here"]').type("Software Engineer").click ();
   }
 
-  selectIndustryType() {
-    cy.get('div[tabindex="0"]').find('input[placeholder="Add an option"]').eq(0).click({multiple: true});
-cy.get('li.p-2.cursor-pointer').first().should("be.visible").click();
-    // Click to open the dropdown   
-   cy.wait("3000");
-  }
+//   selectIndustryType() {
+//     cy.get('div[tabindex="0"]').find('input[placeholder="Add an option"]').eq(0).click({multiple: true});
+// cy.get('li.p-2.cursor-pointer').first().should("be.visible").click();
+//     // Click to open the dropdown   
+//    cy.wait("3000");
+//   }
   enterNumberofHire() {
   // Step 1: Click the dropdown to open options
 cy.get('input[placeholder="Select Option"]').should("be.visible").click({ force: true });
