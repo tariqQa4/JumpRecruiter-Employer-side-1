@@ -4,7 +4,7 @@ describe('Login As Employer', ()=>{
 
 beforeEach(() => {
     cy.viewport(2560, 1392)
-    cy.visit('https://qa-employer.jumprecruiter.com/#')
+    cy.visit('https://employer-stagging.jumprecruiter.us/')
     cy.scrollTo('bottom', { duration: 6000 })
     cy.scrollTo('top', { duration: 6000 })
     cy.wait(2000)
