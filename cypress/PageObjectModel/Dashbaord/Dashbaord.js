@@ -3,7 +3,7 @@ class Dashboard {
     visit() {
 
         cy.visit('https://employer-stagging.jumprecruiter.us/login');
-
+cy.contains('button', 'Decline').click();
         cy.scrollTo('bottom', {
             duration: 6000
         });
