@@ -30,49 +30,13 @@ describe("Post A job  test suite", () => {
     // postAjob.postAjobWithNewJob();
 
     // Baic Information stepper
-   
+      
        postAjob.clickPostAJobButton();
+       postAjob.Addrequirements();
+       postAjob.addCompensation();
+       postAjob.reviewandpublish();
 
-      // Add Your Basic Information section
-      postAjob.enterJobitle(data.JobTitle);
-      postAjob.enterNumberofHire(data.NumberOFHire);
-      postAjob.selectLocationType();
-
-        // Add Your Job Details section
-      postAjob.selectJobType();
-      postAjob.selectExperienceLevel();
-      postAjob.selectEducation();
-      postAjob.selectSchedule();
-      postAjob.willingToTravel();
-      postAjob.enterJobSkills(data.Skill);
-      postAjob.enterLanguagae();
-      postAjob.enterLincense();
-
-    //add your pay and benefits section
-
-    postAjob.enterPayByRange();
-    postAjob.enterMaximumPaybyRange();
-    postAjob.enterMinimumPayByRange();
-    postAjob.enterRate();
-    postAjob.enterCompensationPackage();
-    postAjob.enterOtherBenefits();
-
-    // Description of job section
-      postAjob.enterJobDesc();
-    //   postAjob.uploadFile(filePath);
-
-    // communication preferences
-      postAjob.enterdailyUpdateTo(data.Email);
-
-      // Application preferences
-      postAjob.applicationPreferences();
-
-      // Hire Settings
-      postAjob.hiresettings();
-
-      // Save as draft and submit job
-      postAjob.saveAsDraft();
-      postAjob.submitjob();
+ 
 
     });
 
@@ -80,17 +44,7 @@ describe("Post A job  test suite", () => {
   });
 
 
-//   it("Add Pay and Benefit by Starting Amount ", () => {
-//     postAjob.enterPayBystartingAmount();
-//     postAjob.enterCompensationPackage();
-//     postAjob.enterOtherBenefits();
-//   });
 
-//   it("Add Pay and Benefit by Exact Amount ", () => {
-//     postAjob.enterPayByExactAmount();
-//     postAjob.enterCompensationPackage();
-//     postAjob.enterOtherBenefits();
-//   });
 
 });
 

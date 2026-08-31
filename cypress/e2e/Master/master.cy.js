@@ -2,9 +2,12 @@
 // import Signup from "../Authentication/SignUp.cy";
 import Login from "../Authentication/Login.cy";
 // Home Page
-import HomePage from "../Home/Homepage.cy";
+// import HomePage from "../Home/Homepage.cy";
+// dashboard
+import Dashboard from "../Dashbaord/Dashbaord.cy"; 
+// Job
 // post a job
-import PostAjob from "../Job/PostAjob.cy";
+
 // create company 
 // import CreateCompany from "../Comapny/CreatCompany.cy";
 // Dashboard

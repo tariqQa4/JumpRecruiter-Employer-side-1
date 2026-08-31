@@ -2,212 +2,143 @@ class PostAjob {
   clickPostAJobButton() {
     cy.contains('button', 'Decline').click();
     cy.wait(2000);
-   cy.get('a[href="/job-post"] img[alt="Post a Job icon"]').should("be.visible").click();
+   cy.contains('span', 'Post a Job').click();
 
   cy.wait(5000);
-  cy.get('button.bg-primary').contains('Post a Job').click()
+ cy.contains('button', 'Save & Continue').click()
 
-  // cy.contains('button', 'Save & Continue').click()
-
-
-
-
-
-
-
-  
-  }
-
- 
+ cy.wait(2000);
 
   // Add Your Basic Information section
+ cy.get('input[placeholder="e.g. Senior Software Engineer"]')
+  .click()
+  .type('Software Engineer');
 
-  enterJobitle() {
-    cy.get('input[placeholder="Type or select job title here"]').type("Software Engineer").click ();
+cy.contains('[role="option"]', 'Software Engineer')
+  .click();
+//jobtype
+cy.get('input[placeholder="Full-Time / Part-Time / Contract"]').type("Full-Time").click ()
+cy.contains('[role="option"]', 'Full-Time').click();
+
+
+// city sate postal code 
+
+cy.get('input[placeholder="Type city, state, zip code"]')
+  .click()
+  .type('Lahore, Punjab, 45000');
+
+// cy.get('[role="option"]')
+//   .contains('Lahore')
+//   .click();
+  
+
+ // industry 
+ cy.get('input[placeholder="Select industry"]')
+  .click()
+  .type('Information');
+
+cy.get('[role="option"]')
+  .first()
+  .click();
+
+  //number of openings
+
+cy.get('input[placeholder="e.g. 2"]')
+  .click()
+  .type('2');
+
+cy.get('[role="option"]')
+  .eq(1)
+  .click();
+
+  // decription.  
+  cy.get('.ProseMirror')
+  .click()
+  .type('We are looking for a Software Engineer to join our development team. The ideal candidate should have strong programming skills, experience with software development, debugging, testing, and problem solving. The candidate will work with the team to design, develop, test, and maintain high-quality software applications.');
+
+// applocation  deadline
+cy.get('input[name="job_descriptions.application_deadline"]')
+  .type('2026-09-15');
+
+  cy.wait(2000);
+  cy.contains('button', 'Save & Continue').click();
+  cy.wait(3000);
+
+
+
   }
 
-//   selectIndustryType() {
-//     cy.get('div[tabindex="0"]').find('input[placeholder="Add an option"]').eq(0).click({multiple: true});
-// cy.get('li.p-2.cursor-pointer').first().should("be.visible").click();
-//     // Click to open the dropdown   
-//    cy.wait("3000");
-//   }
-  enterNumberofHire() {
-  // Step 1: Click the dropdown to open options
-cy.get('input[placeholder="Select Option"]').should("be.visible").click({ force: true });
+  Addrequirements() {
+    // experience level
+    cy.get('input[placeholder="e.g. 5+ years"]').type("2 years").click();
+cy.get('[role="option"]')
+  .eq(2)
+  .click();
+    cy.wait(2000);
+    // education level
+    cy.get('input[placeholder="Bachelor\'s / Master\'s / PhD"]')
+  .click()
+  .type("Bachelor's");
 
-// Step 2: Select the first <li> option (e.g., "1–10 employees")
-cy.get('li.p-2.cursor-pointer').first().click();
 
+    
+    // skills
+cy.get('input[placeholder="Add preferred skill..."]')
+  .click()
+  .type('Web Development');
 
+cy.get('[role="option"]')
+  .first()
+  .click();
+    cy.wait(2000);
+
+    cy.get('div[role="button"][name="job_detail.job_skills.skill_id"]')
+  .eq(0)
+  .click();
+
+cy.get('div[role="button"][name="job_detail.job_skills.skill_id"]')
+  .eq(1)
+  .click();
+
+cy.get('div[role="button"][name="job_detail.job_skills.skill_id"]')
+  .eq(2)
+  .click();
+
+  cy.wait(2000);
+    cy.contains('button', 'Save & Continue').click();
+    cy.wait(3000);
   }
+    
+// compensation
+addCompensation() {
+// salary range
+cy.get('input[name="pay_and_benefits.minimum_amount"]')
+  .clear()
+  .type('100');
 
-  selectLocationType() {
-    cy.get('input[type="radio"][value="in-person"]').click();
-  }
+cy.get('input[name="pay_and_benefits.maximum_amount"]')
+  .clear()
+  .type('200');
 
-  enterCityStaeZip(City, State, Zip) {
-    cy.contains("label", "City, State, Postal Code")
-      .next()
-      .find('input[placeholder="Add an option"]');
-    cy.get('input[name="basic_info.city"]').type("Akutan,AK, 99553");
-  }
-  enterStreetAddress(StreetAddress) {
-    cy.get('input[name="basic_info.street_address"]');
-    cy.get('input[name="basic_info.street_address"]').type(StreetAddress);
-    cy.get('input[name="basic_info.street_address"]').click();
-    cy.contains("button", "Continue").click();
-    cy.wait("2000");
-  }
-
-  // Add your Job Details
-
-  selectJobType() {
-    cy.get("").click();
-  }
-
-  selectExperienceLevel() {
-    cy.get("").click();
-  }
-
-  selectEducation() {
-    cy.get("").click();
-    cy.get("").click();
-  }
-
-  selectSchedule() {
-    cy.get().click();
-    cy.get().click();
-  }
-
-  willingToTravel() {
-    cy.get("").click();
-  }
-
-  enterJobSkills(Skill) {
-    cy.get("").type(Skill);
-    cy.get("").click();
-    cy.get("").click();
-  }
-
-  enterLanguagae() {
-    cy.get("").type("English");
-    cy.get("").click();
-  }
-
-  enterLincense() {
-    cy.get("").type("WDLJK00580GF");
-    cy.get("").click();
-  }
-
-  // Add Pay and Benefits section
-
-  //Pay By Range
-
-  enterPayByRange() {
-    cy.get("").click();
-  }
-
-  enterMinimumPayByRange() {
-    cy.get("").type("1285");
-  }
-
-  enterMaximumPaybyRange() {
-    cy.get("").type("1385");
-  }
-
-  enterRate() {
-    cy.get("").click();
-    cy.get("").click();
-  }
-
-  enterCompensationPackage() {
-    cy.get("").click();
-    cy.get("").click();
-  }
-
-  enterOtherBenefits() {
-    cy.get("").click();
-    cy.get("").click();
-
-    // save and continue
-
-    cy.get("").click();
-  }
-
-  enterPayBystartingAmount() {
-    cy.go("back)");
-    cy.get("").click();
-    cy.get("").type("5000");
-    cy.get("").click();
-    cy.get("").click();
-  }
-
-  enterPayByExactAmount() {
-    cy.go("back)");
-    cy.get("").click();
-    cy.get("").type("5000");
-    cy.get("").click();
-    cy.get("").click();
-  }
-
-  // DESCRIB Job Description
-
-  enterJobDesc() {
-    cy.get("").type("");
-    cy.get("").click();
-  }
-  // uploadFile(){
-  //     cy.get('').attachFile(filePath)
-  //     cy.get('').click()
-  // }
-
-  // set preferences section
-
-  // communiction Preferences
-
-  enterdailyUpdateTo(Email) {
-    cy.get("").type(Email);
-    // plus send individual emil
-    cy.get("").click();
-
-    // let potenitial check
-    cy.get("").click();
-  }
-
-  // Appliction Preferences
-
-  applicationPreferences() {
-    // resume require or not
-    cy.get("").click();
-
-    // street address display on job post
-
-    cy.get("").click();
-
-    // Does Background require check
-
-    cy.get("").click();
-  }
-
-  hiresettings() {
-    // timeline for hire settingss
-
-    cy.get("").click();
-    // save and continue
-
-    cy.get("").click();
-    cy.wait("2000");
-  }
-
-  saveAsDraft() {
-    // save as draft
-    cy.get("").click();
-  }
-
-  submitjob() {
-    cy.get("").click();
-  }
+  cy.wait(2000);
+  cy.contains('button', 'Save & Continue').click();
+  cy.wait(3000);
 }
 
+reviewandpublish() {
+  cy.scrollTo('bottom', { duration: 6000 });
+ cy.contains('button', 'Save as draft')
+  .should('be.visible')
+  .click();
+  cy.wait(3000);
+ cy.contains('span', 'Dashboard')
+            .should('be.visible')
+            .click();
+// publish job
+
+  // cy.contains('button', 'Publish').click();
+  // cy.wait(3000);  
+  // cy.contains('button', 'Go to Dashboard').click();
+}
+}
 export default PostAjob;
