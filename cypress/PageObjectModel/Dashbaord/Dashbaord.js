@@ -1,6 +1,6 @@
 class Dashboard {
   visit() {
-    cy.visit("https://qa-employer.jumprecruiter.com/dashboard");
+    cy.visit('https://employer-stagging.jumprecruiter.us/login');
     cy.scrollTo("bottom", { duration: 6000 });
     cy.scrollTo("top", { duration: 6000 });
   }
@@ -15,10 +15,10 @@ class Dashboard {
       });
   }
   clickPostAJobButton() {
-    cy.get('a[href="/job-post"]').click();
+    cy.get('a[href="/job-post"]').click({multiple: true});
 
     cy.wait(2000);
-    cy.contains('button', 'Post a Job').click();
+    cy.contains('button', 'Post a New Job').click();
 
     cy.wait(2000);
     cy.contains('button', 'Continue').click();

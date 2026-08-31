@@ -12,7 +12,7 @@ describe('Dashboard test suite', () => {
 
     beforeEach(() => {
         cy.viewport(2560, 1392);
-        cy.visit('https://qa-employer.jumprecruiter.com/'); 
+        cy.visit('https://employer-stagging.jumprecruiter.us/login'); 
         cy.contains('button', 'Log In').click();
         cy.fixture('Login').then((data) => {
             // Perform the login
