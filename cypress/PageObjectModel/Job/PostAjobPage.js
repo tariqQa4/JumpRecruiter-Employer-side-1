@@ -58,7 +58,7 @@ cy.get('[role="option"]')
 
 // applocation  deadline
 cy.get('input[name="job_descriptions.application_deadline"]')
-  .type('2026-09-15');
+  .type('2026-11-15');
 
   cy.wait(2000);
   cy.contains('button', 'Save & Continue').click();
